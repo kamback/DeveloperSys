@@ -14,3 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Auth::routes();
+
+Route::get('/index', 'IndexController@index')->name('Index');
+Route::get('/', 'IndexController@index');
+Route::get('/logout', 'Auth\LogoutController@index');
